@@ -42,7 +42,13 @@ a {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
 }
 
 /* Header */
@@ -549,7 +555,7 @@ a {
 
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   text-align: center;
 }
@@ -579,7 +585,7 @@ a {
 
 .form-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -608,6 +614,8 @@ a {
   border: 2px solid var(--snl-border);
   background: #ffffff;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form input:focus,
@@ -764,6 +772,14 @@ a {
 
   .mobile-cta-bar {
     display: none;
+  }
+
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
